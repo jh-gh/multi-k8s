@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: dummy-pod
+spec:
+  containers:
+  - name: dummy-pod
+    image: jhnz/dummy-pod
+    
