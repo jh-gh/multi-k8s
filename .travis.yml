@@ -13,7 +13,7 @@ before_install:
   - gcloud auth activate-service-account --key-file service-account.json
   - gcloud config set project kubernetes-grider
   - gcloud config set compute/zone australia-southeast1-a
-  - gcloud container clusters get-credentials fib-cluster
+  - gcloud container clusters get-credentials fib-cluster --zone australia-southeast1-a
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -t jhnz/react-test -f ./client/Dockerfile.dev ./client
 
